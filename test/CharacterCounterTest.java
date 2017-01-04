@@ -13,7 +13,17 @@ public class CharacterCounterTest {
     }
 
     @Test
-    public void count_string()throws Exception {
-
+    public void count_stringAA_returnTwo()throws Exception {
+        CharacterCounter counter = new CharacterCounter("AA");
+        int countA = counter.count('A');
+        Assert.assertEquals(2, countA);
     }
+
+    @Test
+    public void count_stringAA_returnsZeroForB()throws Exception {
+        CharacterCounter counter = new CharacterCounter("AA");
+        int countB = counter.count('B');
+        Assert.assertEquals(0, countB);
+    }
+
 }
